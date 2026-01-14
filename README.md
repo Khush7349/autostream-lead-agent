@@ -62,9 +62,6 @@ pip install -r requirements.txt
 ```env
 GEMINI_API_KEY=your_api_key_here  
 ```
-The `.env` file is ignored by `.gitignore`.  
-Never commit your API key.
-
 4. Run the agent:
 ```bash
 python main.py  
