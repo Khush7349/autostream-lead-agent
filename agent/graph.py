@@ -11,6 +11,16 @@ class AgentState(TypedDict):
     platform: Optional[str]
 def detect_intent_node(state, llm):
     last_user_msg = state["messages"][-1]["content"]
+    if state.get("intent") == "high_intent":
+        if not state.get("name"):
+            state["name"] = last_user_msg
+            return state
+        if not state.get("email"):
+            state["email"] = last_user_msg
+            return state
+        if not state.get("platform"):
+            state["platform"] = last_user_msg
+            return state
     intent = detect_intent(llm, last_user_msg)
     state["intent"] = intent
     return state
