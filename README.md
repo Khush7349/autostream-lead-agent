@@ -11,7 +11,7 @@ This project is built to demonstrate how modern AI agents are designed in produc
 - Multi-step lead capture  
 - Real LLM integration (Google Gemini)
 
-It is not just a “chatbot” — it is a mini sales system.
+It is not just a chatbot, but a mini sales system.
 
 ---
 
@@ -50,25 +50,22 @@ All of this is controlled using a **LangGraph state machine**, which makes the c
 ## ⚙️ Setup Instructions
 
 1. Clone the repository:
-
+```bash
 git clone https://github.com/Khush7349/autostream-lead-agent.git  
 cd social-to-lead-agent  
-
+```
 2. Install dependencies:
-
+```bash
 pip install -r requirements.txt  
-
+```
 3. Create a `.env` file in the root folder:
-
+```env
 GEMINI_API_KEY=your_api_key_here  
-
-The `.env` file is ignored by `.gitignore`.  
-Never commit your API key.
-
+```
 4. Run the agent:
-
+```bash
 python main.py  
-
+```
 You should see:
 
 AutoStream Agent is running. Type 'exit' to quit.
